@@ -10,18 +10,30 @@ import Foundation
 import UIKit
 import WebKit
 import RichText
-//ciao
+
 
 struct ContentView: View {
+    @State var immagine: Image = Image("png.monster-515")
     @State var risultatiScraping: [(String, Int, String)] = randomPageParsed()
     @State var qrCode: Image = Image("")
     @State var titolo: Text = Text("Titolo: ")
+    
     @State var htmlView: RichText = RichText(html: "Ciao")
     
     var body: some View {
+        ZStack{
+        
+        ScrollView{
+        immagine
+            .resizable()
+            .scaledToFit()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 350, height: 350)
+            
+            
         titolo
             .padding()
-        
+            .foregroundColor(.black)
         qrCode
             .resizable()
             .scaledToFit()
@@ -39,7 +51,10 @@ struct ContentView: View {
             .placeholder {
                 Text("loading")
             }
+            .foregroundColor(.black)
     }
+        }.background(Color(red: 244 / 255, green: 255 / 255, blue: 248 / 255))
+}
 }
 
 struct ContentView_Previews: PreviewProvider {
