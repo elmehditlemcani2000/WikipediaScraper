@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import WebKit
 import RichText
+//ciao
 
 struct ContentView: View {
     @State var risultatiScraping: [(String, Int, String)] = randomPageParsed()
