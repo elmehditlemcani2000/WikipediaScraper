@@ -9,11 +9,13 @@ import SwiftUI
 import Foundation
 import UIKit
 import WebKit
+import RichText
 
 struct ContentView: View {
     @State var risultatiScraping: [(String, Int, String)] = randomPageParsed()
     @State var qrCode: Image = Image("")
     @State var titolo: Text = Text("Titolo: ")
+    @State var htmlView: RichText = RichText(html: "Ciao")
     
     var body: some View {
         titolo
@@ -29,7 +31,13 @@ struct ContentView: View {
             risultatiScraping = randomPageParsed()
             qrCode = Image(uiImage: UIImage(data: getQRCodeDate(text: "https://it.wikipedia.org/wiki/\(risultatiScraping[0].2)")!)!)
             titolo = Text("Title: \(risultatiScraping[0].2)")
+            htmlView = RichText(html: risultatiScraping[1].2)
         }
+        
+        htmlView
+            .placeholder {
+                Text("loading")
+            }
     }
 }
 

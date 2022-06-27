@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE370CAA2869988A00CADF8D /* RichText in Frameworks */ = {isa = PBXBuildFile; productRef = CE370CA92869988A00CADF8D /* RichText */; };
 		CE932FF42865FBF000C35F9A /* WikipediaScraperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE932FF32865FBF000C35F9A /* WikipediaScraperApp.swift */; };
 		CE932FF62865FBF000C35F9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE932FF52865FBF000C35F9A /* ContentView.swift */; };
 		CE932FF82865FBF500C35F9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE932FF72865FBF500C35F9A /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE370CAA2869988A00CADF8D /* RichText in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = WikipediaScraper;
+			packageProductDependencies = (
+				CE370CA92869988A00CADF8D /* RichText */,
+			);
 			productName = WikipediaScraper;
 			productReference = CE932FF02865FBF000C35F9A /* WikipediaScraper.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = CE932FE72865FBF000C35F9A;
+			packageReferences = (
+				CE370CA82869988A00CADF8D /* XCRemoteSwiftPackageReference "RichText" */,
+			);
 			productRefGroup = CE932FF12865FBF000C35F9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -337,6 +345,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE370CA82869988A00CADF8D /* XCRemoteSwiftPackageReference "RichText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NuPlay/RichText.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE370CA92869988A00CADF8D /* RichText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE370CA82869988A00CADF8D /* XCRemoteSwiftPackageReference "RichText" */;
+			productName = RichText;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE932FE82865FBF000C35F9A /* Project object */;
 }
