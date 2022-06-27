@@ -20,9 +20,12 @@ struct ContentView: View {
     
     @State var htmlView: RichText = RichText(html: "Ciao")
     
+    
     var body: some View {
-        ZStack{
+
         
+        ZStack{
+          Color("azzurro")
         ScrollView{
         immagine
             .resizable()
@@ -32,8 +35,9 @@ struct ContentView: View {
             
             
         titolo
+            Color("azzurro")
             .padding()
-            .foregroundColor(.black)
+            
         qrCode
             .resizable()
             .scaledToFit()
@@ -53,7 +57,9 @@ struct ContentView: View {
             }
             .foregroundColor(.black)
     }
-        }.background(Color(red: 244 / 255, green: 255 / 255, blue: 248 / 255))
+        }
+        //.background(Color(red: 244 / 255, //green: 255 / 255, blue: 248 / //255))
+            
 }
 }
 
