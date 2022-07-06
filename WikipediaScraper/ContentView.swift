@@ -22,6 +22,7 @@ struct ContentView: View {
     
     
     var body: some View {
+        
 
         
         ZStack{
@@ -32,7 +33,7 @@ struct ContentView: View {
             .scaledToFit()
             .aspectRatio(contentMode: .fit)
             .frame(width: 350, height: 350)
-            
+
             
         titolo
             Color("azzurro")
